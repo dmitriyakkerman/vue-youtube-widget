@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+.youtube-widget {
+  font-family: 'Roboto', sans-serif;
+
+  &__header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px;
+    background: #FAFAFA;
+  }
+
+  &__info {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  &__logo {
+    border-radius: 100%;
+  }
+
+  &__data {
+    margin-left: 15px;
+  }
+
+  &__title {
+    margin: 0;
+  }
+
+  &__subscribers-count {
+    color: #606060;
+  }
+
+  &__subscribe-btn,
+  &__load-more-btn {
+    padding: 10px 16px;
+    border-radius: 2px;
+    border: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+
+  &__subscribe-btn {
+    background: #CC0000;
+    color: #FFFFFF;
+  }
+
+  &__inner {
+    margin-top: 24px;
+  }
+
+  &__load-more-btn {
+    display: block;
+    margin: 32px auto 0 auto;
+    background: #FAFAFA;
+    color: #606060;
+    cursor: pointer;
+  }
+}
+
+@media(max-width: 575px) {
+
+  .youtube-widget {
+
+    &__header {
+      flex-direction: column;
+      padding: 16px;
+    }
+
+    &__logo {
+      width: 80px;
+      height: 80px;
+    }
+
+    &__subscribe-btn {
+      margin-top: 24px;
+    }
+  }
+}
