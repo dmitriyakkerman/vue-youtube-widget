@@ -88,52 +88,66 @@ npm run serve
 API key from Google API Console
 
 *Type:* String  
+
 *Required:* true
 
 ##### `channelId`
 ID of Youtube channel
 
 *Type:* String  
+
 *Required:* true
 
 ##### `resultsPerRequest`
 Number of requested videos per request
 
-*Type:* Number 
+*Type:* Number
+
 *Required:* false
+
 *Default:* 1
 
 ##### `subscribersCountToFixed`
 The number of digits to appear after the decimal point in subscribers count
 
 *Type:* Number 
+
 *Required:* false
+
 *Default:* 1
 
 ##### `subscribersCountToFixed`
 The number of digits to appear after the decimal point in subscribers count
 
 *Type:* Number 
+
 *Required:* false
+
 *Default:* 1
 
 ##### `subscribersCountText`
 "subscribers" word replacement for localized text using vue-i18n
 
 *Type:* String 
+
 *Required:* false
+
 *Default:* "subscribers"
 
 ##### `subscribeBtnText`
 "Subscribe" word replacement in "Subscribe" button for localized text using vue-i18n
 
 *Type:* String 
+
 *Required:* false
+
 *Default:* "Subscribe"
 
 ##### `loadMoreBtnText`
 "Load more" word replacement in "Load more" button for localized text using vue-i18n
 
 *Type:* String 
+
 *Required:* false
+
 *Default:* "Load more"
