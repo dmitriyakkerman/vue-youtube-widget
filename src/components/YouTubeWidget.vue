@@ -53,6 +53,7 @@
             },
             loadMoreBtnText: {
                 type: String,
+                required: false,
                 default: 'Load more'
             }
         },
