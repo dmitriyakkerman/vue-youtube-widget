@@ -34,7 +34,7 @@ npm install
 
 ```js
 <template>
-  <div id="app">
+  <div>
     <YouTubeWidget apiKey="YOUR_API_KEY" channelId="YOUR_CHANNEL_ID"></YouTubeWidget>
   </div>
 </template>
@@ -43,7 +43,6 @@ npm install
 import YouTubeWidget from "./components/YouTubeWidget";
 
 export default {
-  name: 'App',
   components: {
     YouTubeWidget
   }
@@ -56,7 +55,7 @@ export default {
 
 ```js
 <template>
-  <div id="app">
+  <div>
     <YouTubeWidget
             apiKey="YOUR_API_KEY"
             channelId="YOUR_CHANNEL_ID"
@@ -84,12 +83,7 @@ export default {
 ```
 
 4. Write your additional custom styles for widget.
-5. Run dev server:
-
-```js
-npm run serve
-```
-6. Enjoy! 🎉
+5. Enjoy! 🎉
 
 -------------
 
