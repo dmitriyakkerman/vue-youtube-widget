@@ -72,42 +72,66 @@
             async getChannelTitleAndAvatar() {
                 this.isSending = true;
 
-                const response = await getChannelTitleAndAvatar(this.channelId, this.apiKey);
+                try {
+                    const response = await getChannelTitleAndAvatar(this.channelId, this.apiKey);
 
-                this.channelAvatar = response["items"][0].snippet.thumbnails.default.url;
-                this.channelTitle = response["items"][0].snippet.localized.title;
-
-                this.isSending = false;
+                    this.channelAvatar = response["items"][0].snippet.thumbnails.default.url;
+                    this.channelTitle = response["items"][0].snippet.localized.title;
+                }
+                catch(error) {
+                    console.log(error);
+                }
+                finally {
+                    this.isSending = false;
+                }
             },
             async getSubscribersCount() {
                 this.isSending = true;
 
-                const response = await getSubscribersCount(this.channelId, this.apiKey);
+                try {
+                    const response = await getSubscribersCount(this.channelId, this.apiKey);
 
-                this.subscribersCount = response["items"][0].statistics.subscriberCount;
-                this.totalVideosCount = response["items"][0].statistics.videoCount;
-
-                this.isSending = false;
+                    this.subscribersCount = response["items"][0].statistics.subscriberCount;
+                    this.totalVideosCount = response["items"][0].statistics.videoCount;
+                }
+                catch(error) {
+                    console.log(error);
+                }
+                finally {
+                    this.isSending = false;
+                }
             },
             async getVideos() {
                 this.isSending = true;
 
-                const response = await getVideos(this.channelId, this.apiKey, this.resultsPerRequest);
+                try {
+                    const response = await getVideos(this.channelId, this.apiKey, this.resultsPerRequest);
 
-                this.videos = response.items;
-                this.nextPageToken = response.nextPageToken;
-
-                this.isSending = false;
+                    this.videos = response.items;
+                    this.nextPageToken = response.nextPageToken;
+                }
+                catch(error) {
+                    console.log(error);
+                }
+                finally {
+                    this.isSending = false;
+                }
             },
             async loadMore() {
                 this.isSending = true;
 
-                const response = await loadMoreVideos(this.channelId, this.apiKey, this.resultsPerRequest, this.nextPageToken);
+                try {
+                    const response = await loadMoreVideos(this.channelId, this.apiKey, this.resultsPerRequest, this.nextPageToken);
 
-                this.videos = [...this.videos, ...response.items];
-                this.nextPageToken = response.nextPageToken;
-
-                this.isSending = false;
+                    this.videos = [...this.videos, ...response.items];
+                    this.nextPageToken = response.nextPageToken;
+                }
+                catch(error) {
+                    console.log(error);
+                }
+                finally {
+                    this.isSending = false;
+                }
             },
         },
         mounted() {
