@@ -9,21 +9,32 @@
 * Fetches initial count of videos 
 * Loads additional videos
 
-## Usage
+## Installation
+
+### npm
+
+```js
+npm i vue-youtube-widget
+```
+
+### Github
 
 1. Clone repository 
 ```js
-https://github.com/dmitriyakkerman/vue-vuex-i18n-browser-sfc-starter.git
+https://github.com/dmitriyakkerman/vue-youtube-widget.git
 ```
 2. Install dependencies
 ```js
 npm install
 ```
-3. Import "YouTubeWidget" component in you app
+
+## Usage
+
+1. Import "YouTubeWidget" component in you app
 
 ```js
 <template>
-  <div id="app">
+  <div>
     <YouTubeWidget apiKey="YOUR_API_KEY" channelId="YOUR_CHANNEL_ID"></YouTubeWidget>
   </div>
 </template>
@@ -32,7 +43,6 @@ npm install
 import YouTubeWidget from "./components/YouTubeWidget";
 
 export default {
-  name: 'App',
   components: {
     YouTubeWidget
   }
@@ -41,11 +51,11 @@ export default {
 
 ```
 
-4. Configure component additional props if needed:
+2. Configure component additional props if needed:
 
 ```js
 <template>
-  <div id="app">
+  <div>
     <YouTubeWidget
             apiKey="YOUR_API_KEY"
             channelId="YOUR_CHANNEL_ID"
@@ -61,7 +71,7 @@ export default {
 ...
 ```
 
-5. Import "YouTubeWidget" base styles from "main.scss"
+3. Import "YouTubeWidget" base styles from "main.scss"
 
 ```css
 ...
@@ -72,13 +82,8 @@ export default {
 
 ```
 
-6. Write your additional custom styles for widget.
-7. Run dev server:
-
-```js
-npm run serve
-```
-8. Enjoy! 🎉
+4. Write your additional custom styles for widget.
+5. Enjoy! 🎉
 
 -------------
 
