@@ -71,7 +71,7 @@ export default {
 ...
 ```
 
-3. Import "YouTubeWidget" base styles from "main.scss"
+3. Import "YouTubeWidget" basic styles from "main.scss"
 
 ```css
 ...
