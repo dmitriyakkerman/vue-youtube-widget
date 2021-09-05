@@ -121,15 +121,6 @@ The number of digits to appear after the decimal point in subscribers count
 
 *Default:* 1
 
-##### `subscribersCountToFixed`
-The number of digits to appear after the decimal point in subscribers count
-
-*Type:* Number 
-
-*Required:* false
-
-*Default:* 1
-
 ##### `subscribersCountText`
 "subscribers" word replacement for localized text using vue-i18n
 
