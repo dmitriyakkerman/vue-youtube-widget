@@ -60,7 +60,6 @@ export default {
             apiKey="YOUR_API_KEY"
             channelId="YOUR_CHANNEL_ID"
             :resultsPerRequest="4"
-            :subscribersCountToFixed="1"
             subscribersCountText="подписчиков"
             subscribeBtnText="Подписаться"
             loadMoreBtnText="Загрузить еще"
@@ -107,15 +106,6 @@ ID of Youtube channel
 Number of requested videos per request
 
 *Type:* Number
-
-*Required:* false
-
-*Default:* 1
-
-##### `subscribersCountToFixed`
-The number of digits to appear after the decimal point in subscribers count
-
-*Type:* Number 
 
 *Required:* false
 

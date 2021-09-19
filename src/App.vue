@@ -4,7 +4,6 @@
             apiKey="YOUR_API_KEY"
             channelId="YOUR_CHANNEL_ID"
             :resultsPerRequest="4"
-            :subscribersCountToFixed="1"
             subscribersCountText="подписчиков"
             subscribeBtnText="Подписаться"
             loadMoreBtnText="Загрузить еще"

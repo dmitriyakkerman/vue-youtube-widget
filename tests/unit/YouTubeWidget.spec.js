@@ -5,7 +5,6 @@ const mockData = {
     apiKey: 'yourapikey',
     channelId: 'UCLA_DiR1FfKNvjuUpBHmylQ',
     resultsPerRequest: 1,
-    subscribersCountToFixed: 1,
     subscribersCountText: "подписчиков",
     subscribeBtnText: "Подписаться",
     loadMoreBtnText: "Загрузить еще",
@@ -50,7 +49,6 @@ describe('YouTubeWidget.vue', () => {
             apiKey: mockData.apiKey,
             channelId: mockData.channelId,
             resultsPerRequest: mockData.resultsPerRequest,
-            subscribersCountToFixed: mockData.subscribersCountToFixed,
             subscribersCountText: mockData.subscribersCountText,
             subscribeBtnText: mockData.subscribeBtnText,
             loadMoreBtnText: mockData.loadMoreBtnText
@@ -66,14 +64,12 @@ describe('YouTubeWidget.vue', () => {
         expect(wrapper.props().apiKey).toBe(mockData.apiKey);
         expect(wrapper.props().channelId).toBe(mockData.channelId);
         expect(wrapper.props().resultsPerRequest).toBe(mockData.resultsPerRequest);
-        expect(wrapper.props().subscribersCountToFixed).toBe(mockData.subscribersCountToFixed);
         expect(wrapper.props().subscribersCountText).toBe(mockData.subscribersCountText);
-
         expect(wrapper.props().subscribeBtnText).toBe(mockData.subscribeBtnText);
+        expect(wrapper.props().loadMoreBtnText).toBe(mockData.loadMoreBtnText);
+
         expect(wrapper.find('.youtube-widget__subscribe-btn').attributes('href')).toEqual('http://www.youtube.com/channel/' + mockData.channelId + '?sub_confirmation=1');
         expect(wrapper.find('.youtube-widget__subscribe-btn').text()).toEqual(mockData.subscribeBtnText);
-
-        expect(wrapper.props().loadMoreBtnText).toBe(mockData.loadMoreBtnText);
         expect(wrapper.find('.youtube-widget__load-more-btn').text()).toEqual(mockData.loadMoreBtnText);
     });
 
@@ -94,7 +90,7 @@ describe('YouTubeWidget.vue', () => {
     it("fetches channel subscribers count", async () => {
         wrapper.vm.$nextTick(() => {
             expect(wrapper.vm.subscribersCount).toEqual(mockData.httpResponse.data["items"][0].statistics.subscriberCount);
-            expect(wrapper.find('.youtube-widget__subscribers-count').text()).toEqual(Number(mockData.httpResponse.data["items"][0].statistics.subscriberCount/1000).toFixed(mockData.subscribersCountToFixed) + ' ' + mockData.subscribersCountText);
+            expect(wrapper.find('.youtube-widget__subscribers-count').text()).toEqual(Number(mockData.httpResponse.data["items"][0].statistics.subscriberCount) + ' ' + mockData.subscribersCountText);
         })
     });
 

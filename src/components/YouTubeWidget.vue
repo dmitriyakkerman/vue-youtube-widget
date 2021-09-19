@@ -5,7 +5,7 @@
                 <img :src="channelAvatar" alt="" class="youtube-widget__logo">
                 <div class="youtube-widget__data">
                     <h2 class="youtube-widget__title">{{ channelTitle }}</h2>
-                    <div class="youtube-widget__subscribers-count">{{ Number(subscribersCount/1000).toFixed(subscribersCountToFixed) }} {{ subscribersCountText }}</div>
+                    <div class="youtube-widget__subscribers-count">{{ subscribersCount }} {{ subscribersCountText }}</div>
                 </div>
             </div>
             <a :href="'http://www.youtube.com/channel/' + channelId + '?sub_confirmation=1'" class="youtube-widget__subscribe-btn">{{ subscribeBtnText }}</a>
@@ -32,11 +32,6 @@
                 required: true
             },
             resultsPerRequest: {
-                type: Number,
-                required: false,
-                default: 1
-            },
-            subscribersCountToFixed: {
                 type: Number,
                 required: false,
                 default: 1
