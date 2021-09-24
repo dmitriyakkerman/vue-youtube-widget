@@ -127,7 +127,7 @@
                 finally {
                     this.isSending = false;
                 }
-            },
+            }
         },
         mounted() {
             this.getChannelTitleAndAvatar();
