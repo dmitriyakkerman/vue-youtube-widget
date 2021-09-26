@@ -111,4 +111,8 @@ describe('YouTubeWidget.vue', () => {
             expect(wrapper.findAll('iframe').length).toBe(2);
         })
     });
+
+    it('should match snapshot', () => {
+        expect(wrapper.html()).toMatchSnapshot();
+    })
 });
