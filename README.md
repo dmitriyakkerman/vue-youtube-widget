@@ -75,8 +75,8 @@ export default {
 ```css
 ...
 
-<style lang="scss">
-    @import "main.scss";
+<style>
+  @import "~vue-youtube-widget/dist/YouTubeWidget.min.css";
 </style>
 
 ```
